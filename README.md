@@ -30,6 +30,13 @@ Various aspects of the code will be highlighted below.
 
 `*.tif`: Sets the file format as TIFF
 
+To distinguish levels of editing within variations of files, OMCA historically uses a scale of 1-3 paired with a letter that distinguishes individual imaging equipment. The for loop below renames the files from J1 to J2 to note the additional editing. 
+
+    for file in *.tif
+    do
+      mv "$file" "${file/J1/J2}"
+    done
+
 ## Mac Setup 
 Download [Homebrew](https://brew.sh/ "Homebrew"). 
 
