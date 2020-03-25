@@ -1,5 +1,5 @@
 # Autocrop
-A short bash script that helps with batch editing image files written for use on a Mac.
+A short bash script that helps with batch editing image files based on background color. Written for Mac.
 
 ## Background
 I developed this script while working at Oakland Museum of California in collaboration with two colleagues to batch edit photonegatives. I was brought on to catalog and image Dorothea Lange's 50,000 negatives. As the negatives are stored in cold storage, I would process about 500 to 700 negatives at a time. 
