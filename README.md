@@ -12,7 +12,7 @@ The negatives vary in format from 35mm to 4x5", and even within each format ther
 ## How It Works
 Various aspects of the code will be highlighted below. 
 
-  mogrify -background black -fuzz 60% -trim -deskew 20% +repage -type TrueColor *.tif
+    mogrify -background black -fuzz 60% -trim -deskew 20% +repage -type TrueColor *.tif
   
 This script uses ImageMagick mogrify program to crop a file and overwrite it. 
 
@@ -31,10 +31,11 @@ This script uses ImageMagick mogrify program to crop a file and overwrite it.
 `*.tif`: Sets the file format as .tif
 
 ## Mac Setup 
-Download [Homebrew] (https://brew.sh/ "Homebrew"). 
+Download [Homebrew](https://brew.sh/ "Homebrew"). 
 
-Use Homebrew to install [ImageMagic] (https://imagemagick.org/ "ImageMagick"):
-  brew install imagemagick
+Use Homebrew to install [ImageMagic](https://imagemagick.org/ "ImageMagick"):
+
+    brew install imagemagick
 
 ### File Structure 
 This script relies on a particular file structure which described below so that users can replicate or adjust according to their own needs. 
