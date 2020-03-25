@@ -26,9 +26,9 @@ Various aspects of the code will be highlighted below.
 
 `+repage`: Resets the image virtual canvas to the actual image.
 
-`-type TrueColor`: Force a TIFF image to be saved as a full color RGB.
+`-type TrueColor`: Forces TIFF image to be saved as a full color RGB.
 
-`*.tif`: Sets the file format as .tif
+`*.tif`: Sets the file format as TIFF
 
 ## Mac Setup 
 Download [Homebrew](https://brew.sh/ "Homebrew"). 
