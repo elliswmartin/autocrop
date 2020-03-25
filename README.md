@@ -10,11 +10,11 @@ The negatives were imaged on a lightpad using a DSLR (Pentax K1) on a copystand.
 The negatives vary in format from 35mm to 4x5", and even within each format there are minor size variations. The negatives were not separated by film format or size. I needed a script that could edit based on something other than size (which could be done in Camera Raw, Photoshop, etc).   
 
 ## How It Works
-Various aspects of the code will be highlighted below. 
+This script uses ImageMagick mogrify program to crop a file and overwrite it. 
 
     mogrify -background black -fuzz 60% -trim -deskew 20% +repage -type TrueColor *.tif
   
-This script uses ImageMagick mogrify program to crop a file and overwrite it. 
+Various aspects of the code will be highlighted below. 
 
 `-background black`: Inverted lightpad becomes a black background, which visually distinguishes the negative from the background. 
 
