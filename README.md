@@ -33,7 +33,7 @@ Various aspects of the code will be highlighted below.
 ## Mac Setup 
 Download [Homebrew](https://brew.sh/ "Homebrew"). 
 
-Use Homebrew to install [ImageMagic](https://imagemagick.org/ "ImageMagick"):
+Use Homebrew to install [ImageMagick](https://imagemagick.org/ "ImageMagick"):
 
     brew install imagemagick
 
