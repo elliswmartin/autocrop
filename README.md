@@ -62,4 +62,5 @@ The negatives were staged on a lightpad and imaged using a DSLR (Pentax K1) moun
 
 The negatives vary in format from 35mm to 4x5in, and even within each format there are minor size variations. The negatives were not separated by film format or size. I needed a script that could edit based on something other than size (which could be done in Camera Raw, Photoshop, etc).   
 
-TIFF files processed by the script are in the following state prior to processing: inverted to positive, converted to black & white, flipped on the vertical edge, and have OMCA metadata appended to them in a custom Photoshop Action. Photoshop saves them to a subfolder within Crop called TIFF.   
+### Image Properties
+The TIFF files processed by this script are in the following state prior to processing: inverted to positive, converted to black & white, flipped on the vertical edge, and have OMCA metadata appended to them in a custom Photoshop Action. Photoshop saves them to a subfolder within Crop called TIFF.   
