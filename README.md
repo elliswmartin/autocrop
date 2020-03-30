@@ -7,7 +7,7 @@ I developed this script while working at Oakland Museum of California in collabo
 ### Image Setup
 The negatives were staged on a lightpad and imaged using a DSLR (Pentax K1) mounted on a copystand. 
 
-The negatives vary in format from 35mm to 4x5", and even within each format there are minor size variations. The negatives were not separated by film format or size. I needed a script that could edit based on something other than size (which could be done in Camera Raw, Photoshop, etc).   
+The negatives vary in format from 35mm to 4x5in, and even within each format there are minor size variations. The negatives were not separated by film format or size. I needed a script that could edit based on something other than size (which could be done in Camera Raw, Photoshop, etc).   
 
 ## How It Works
 This script uses ImageMagick mogrify program to crop a file and overwrite it. Since the lightpad background can be visually distinguished from the negative, this became the way to custom crop each negative based on color difference rather than size. 
@@ -37,18 +37,31 @@ To distinguish levels of editing within variations of files, OMCA historically u
       mv "$file" "${file/J1/J2}"
     done
 
-## Mac Setup 
+## Usage (Mac Only)
+1. Make sure you have Homebrew and ImageMagick installed. 
+
 Download [Homebrew](https://brew.sh/ "Homebrew"). 
 
 Use Homebrew to install [ImageMagick](https://imagemagick.org/ "ImageMagick"):
 
-    brew install imagemagick
+    $ brew install imagemagick
 
-### Folder Structure 
-This script relies on a particular file structure which described below so that users can replicate or adjust according to their own needs. 
+1. This script ships assuming the following folder structure. You are welcome to modify this for your needs within the /trim_deskew.sh script.
+
+        ├── Desktop
+        │   ├── Crop
+        │   ├── Processed
+
+1. Add your images to be processed into the "/Desktop/Crop" folder.
+
+1. Open Terminal and navigate to the location of the /trim_deskew.sh script:
+
+        $ cd <path/to/autocrop/folder>
+
+1. Run the script. Trimmed and deskewed images will appear in the "/Desktop/Processed" folder.
+
+        $ trim_deskew.sh
+
 
 #### Crop
 Desktop folder where partially-processed images are saved. These TIFF files have been previously inverted to positive, converted to black & white, flipped on the vertical edge, and have OMCA metadata appended to them in a custom Photoshop Action. Photoshop saves them to a subfolder within Crop called TIFF.   
-
-#### Processed
-Desktop folder that script copies all files from the Crop folder to. Through the execution of the script, these TIFF files become the final reference-level TIFF files that get backed up to the server (as well as the Master DNG files). 
