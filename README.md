@@ -25,16 +25,12 @@ Various aspects of the code will be highlighted below.
 To distinguish levels of editing within variations of files, OMCA historically uses a scale of 1-3 paired with a letter that distinguishes individual imaging equipment. The for loop below renames the files from J1 to J2 to note the additional editing. 
 
         for file in *.tif
-            do
+                do
         mv "$file" "${file/J1/J2}"
         done
 
 ## Usage (Mac Only)
-1. Make sure you have Homebrew and ImageMagick installed. 
-
-Download [Homebrew](https://brew.sh/ "Homebrew"). 
-
-Use Homebrew to install [ImageMagick](https://imagemagick.org/ "ImageMagick"):
+1. Make sure you have [Homebrew](https://brew.sh/ "Homebrew") and [ImageMagick](https://imagemagick.org/ "ImageMagick") installed. If not, download Homebrew and use to install ImageMagick: 
 
         $ brew install imagemagick
 
