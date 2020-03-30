@@ -1,14 +1,6 @@
 # Autocrop
 A short bash script that helps with batch editing image files based on background color. Written for Mac.
 
-## Background
-I developed this script while working at Oakland Museum of California in collaboration with two colleagues to batch edit photonegatives. I was brought on to catalog and image Dorothea Lange's 50,000 negatives. As the negatives are stored in cold storage, I would process about 500 to 700 negatives at a time. 
-
-### Image Setup
-The negatives were staged on a lightpad and imaged using a DSLR (Pentax K1) mounted on a copystand. 
-
-The negatives vary in format from 35mm to 4x5in, and even within each format there are minor size variations. The negatives were not separated by film format or size. I needed a script that could edit based on something other than size (which could be done in Camera Raw, Photoshop, etc).   
-
 ## How It Works
 This script uses ImageMagick mogrify program to crop a file and overwrite it. Since the lightpad background can be visually distinguished from the negative, this became the way to custom crop each negative based on color difference rather than size. 
 
@@ -62,6 +54,12 @@ Use Homebrew to install [ImageMagick](https://imagemagick.org/ "ImageMagick"):
 
         $ trim_deskew.sh
 
+## Background
+I developed this script while working at Oakland Museum of California in collaboration with two colleagues to batch edit photonegatives. I was brought on to catalog and image Dorothea Lange's 50,000 negatives. As the negatives are stored in cold storage, I would process about 500 to 700 negatives at a time. 
 
-#### Crop
-Desktop folder where partially-processed images are saved. These TIFF files have been previously inverted to positive, converted to black & white, flipped on the vertical edge, and have OMCA metadata appended to them in a custom Photoshop Action. Photoshop saves them to a subfolder within Crop called TIFF.   
+### Image Setup
+The negatives were staged on a lightpad and imaged using a DSLR (Pentax K1) mounted on a copystand. 
+
+The negatives vary in format from 35mm to 4x5in, and even within each format there are minor size variations. The negatives were not separated by film format or size. I needed a script that could edit based on something other than size (which could be done in Camera Raw, Photoshop, etc).   
+
+TIFF files processed by the script are in the following state prior to processing: inverted to positive, converted to black & white, flipped on the vertical edge, and have OMCA metadata appended to them in a custom Photoshop Action. Photoshop saves them to a subfolder within Crop called TIFF.   
